@@ -11,7 +11,7 @@ const Search = () => {
   useEffect(() => {
     axios
       .get(
-        `/track.search?q_track=${searchkey}&page_size=10&page=1&s_track_rating=desc&apikey=${process.env.REACT_APP_MM}`
+        `${process.env.REACT_APP_BASE_URL}/track.search?q_track=${searchkey}&page_size=10&page=1&s_track_rating=desc&apikey=${process.env.REACT_APP_MM}`
       )
       .then(res => {
         let track_list = res.data.message.body.track_list;

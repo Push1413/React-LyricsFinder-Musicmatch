@@ -13,7 +13,7 @@ export const GlobalProvider = ({ children }) => {
   useEffect(() => {
     axios
       .get(
-        `/chart.tracks.get?page=1&page_size=10&country=us&f_has_lyrics=1&apikey=${process.env.REACT_APP_MM}`
+        `${process.env.REACT_APP_BASE_URL}/chart.tracks.get?page=1&page_size=10&country=us&f_has_lyrics=1&apikey=${process.env.REACT_APP_MM}`
       )
       .then(res =>
         setState({
